@@ -21,12 +21,14 @@ class UserService(
     private val bookService: BookService
 ) {
 
-    var logger: Logger = LoggerFactory.getLogger(UserService::class.java)
+    val logger: Logger = LoggerFactory.getLogger(UserService::class.java)
 
     fun getAll() = userDao.getAll().map { it.toUserDto() }
 
     fun getById(userId: UUID) =
-        userDao.findBy { it.id == userId }.firstOrNull()
+        userDao.findBy { it.id == userId }
+            .map { it.toUserDto() }
+            .firstOrNull()
 
     fun addUser(request: CreateUserRequest) = userDao.addUser(
         request

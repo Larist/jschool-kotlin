@@ -14,18 +14,17 @@ class UserController(private val userService: UserService) {
     @GetMapping
     fun getAll() = userService.getAll()
 
-    @GetMapping("/{userId}")
-    fun getById(@PathVariable userId: String) {
+    @GetMapping("{userId}")
+    fun getById(@PathVariable userId: String) =
         userService.getById(userId.toUUID())
-            ?: throw NotFoundException("User with userId $userId not found")
-    }
+            ?: throw NotFoundException("User with id $userId not found")
 
     @PostMapping
-    fun addUser(request: CreateUserRequest) {
+    fun createUser(request: CreateUserRequest) {
         userService.addUser(request)
     }
 
-    @PutMapping("/{userId}/books")
+    @PutMapping("{userId}/books")
     fun changeUserBooks(@PathVariable userId: String, request: ChangeUserBooksRequest) =
         userService.changeUserBooks(userId, request)
 

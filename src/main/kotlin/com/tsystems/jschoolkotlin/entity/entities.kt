@@ -1,5 +1,6 @@
 package com.tsystems.jschoolkotlin.entity
 
+import org.slf4j.LoggerFactory
 import java.util.*
 import kotlin.reflect.KClass
 
@@ -29,5 +30,5 @@ enum class Genre(val value: String) {
 }
 
 private fun randomUUIDAndLog(clazz: KClass<out Entity>) = UUID.randomUUID().also {
-    println("New instance of $clazz with uuid $it created")
+    LoggerFactory.getLogger(clazz.java).debug("New instance of $clazz with uuid $it created")
 }

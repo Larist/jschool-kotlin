@@ -1,6 +1,7 @@
 package com.tsystems.jschoolkotlin.util
 
 import com.tsystems.jschoolkotlin.entity.Book
+import com.tsystems.jschoolkotlin.entity.Genre
 import com.tsystems.jschoolkotlin.entity.User
 import com.tsystems.jschoolkotlin.model.BookDto
 import com.tsystems.jschoolkotlin.model.CreateUserRequest
@@ -26,3 +27,6 @@ fun CreateUserRequest.toUser() =
         age,
         email = email
     )
+
+
+fun BookDto.toBook() = Book(name, author, Genre.valueOf(genre))
