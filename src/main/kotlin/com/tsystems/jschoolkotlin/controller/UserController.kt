@@ -25,7 +25,9 @@ class UserController(private val userService: UserService) {
     }
 
     @PutMapping("{userId}/books")
-    fun changeUserBooks(@PathVariable userId: String, request: ChangeUserBooksRequest) =
-        userService.changeUserBooks(userId, request)
+    fun changeUserBooks(
+        @PathVariable userId: String,
+        @RequestBody request: ChangeUserBooksRequest
+    ) = userService.changeUserBooks(userId, request)
 
 }

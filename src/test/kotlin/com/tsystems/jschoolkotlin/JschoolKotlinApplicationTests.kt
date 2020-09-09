@@ -8,6 +8,7 @@ class JschoolKotlinApplicationTests {
 
     @Test
     fun contextLoads() {
+        // just test spring context start
     }
 
 }

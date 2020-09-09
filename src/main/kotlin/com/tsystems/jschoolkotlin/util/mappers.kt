@@ -8,6 +8,7 @@ import com.tsystems.jschoolkotlin.model.CreateUserRequest
 import com.tsystems.jschoolkotlin.model.UserDto
 
 fun User.toUserDto() = UserDto(
+    id.toString(),
     "$name $lastName",
     age,
     email ?: "has no email",
@@ -15,6 +16,7 @@ fun User.toUserDto() = UserDto(
 )
 
 fun Book.toBookDto() = BookDto(
+    id.toString(),
     name,
     author,
     genre.value
@@ -27,6 +29,5 @@ fun CreateUserRequest.toUser() =
         age,
         email = email
     )
-
 
 fun BookDto.toBook() = Book(name, author, Genre.valueOf(genre))

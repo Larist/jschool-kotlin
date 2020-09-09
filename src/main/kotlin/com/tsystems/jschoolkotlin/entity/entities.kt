@@ -10,7 +10,7 @@ data class User(
     val name: String,
     val lastName: String,
     val age: Int,
-    val books: Set<Book> = setOf(),
+    val books: MutableSet<Book> = mutableSetOf(),
     val email: String? = null,
     val id: UUID = randomUUIDAndLog(User::class)
 ) : Entity()

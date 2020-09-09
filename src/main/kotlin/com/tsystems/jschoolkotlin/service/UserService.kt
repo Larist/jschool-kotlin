@@ -1,5 +1,6 @@
 package com.tsystems.jschoolkotlin.service
 
+import com.tsystems.jschoolkotlin.dao.BookDao
 import com.tsystems.jschoolkotlin.dao.UserDao
 import com.tsystems.jschoolkotlin.exception.IdInvalidException
 import com.tsystems.jschoolkotlin.model.ChangeUserBooksRequest
@@ -18,7 +19,7 @@ typealias Action = ChangeUserBooksRequest.Action
 @Service
 class UserService(
     private val userDao: UserDao,
-    private val bookService: BookService
+    private val bookDao: BookDao
 ) {
 
     val logger: Logger = LoggerFactory.getLogger(UserService::class.java)
@@ -39,25 +40,20 @@ class UserService(
     fun changeUserBooks(userId: String, userBooksRequest: ChangeUserBooksRequest) =
         userBooksRequest.stateBooks.forEach { bookState ->
             try {
-                bookService.getById(bookState.bookId.toUUID())?.let { book ->
-                    {
-                        getById(userId.toUUID())?.let {
-                            when (bookState.action) {
-                                Action.ADD -> {
-                                    it.books.plusElement(book)
-                                }
-                                Action.DELETE ->
-                                    it.books.minusElement(book)
+                bookDao.findBy { it.id == bookState.bookId.toUUID() }.firstOrNull()?.let { book ->
+                    userDao.findBy { it.id == userId.toUUID() }.firstOrNull()?.let { user ->
+                        when (bookState.action) {
+                            Action.ADD -> {
+                                user.books.add(book)
                             }
+                            Action.DELETE ->
+                                user.books.remove(book)
                         }
-
                     }
                 }
             } catch (ex: IdInvalidException) {
                 logger.warn(ex.message)
             }
         }
-
-
 }
 
