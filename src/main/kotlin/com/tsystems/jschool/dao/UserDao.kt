@@ -1,6 +1,6 @@
-package com.tsystems.jschoolkotlin.dao
+package com.tsystems.jschool.dao
 
-import com.tsystems.jschoolkotlin.entity.User
+import com.tsystems.jschool.entity.User
 import org.springframework.stereotype.Repository
 import java.util.*
 

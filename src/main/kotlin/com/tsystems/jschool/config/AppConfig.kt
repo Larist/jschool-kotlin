@@ -1,4 +1,4 @@
-package com.tsystems.jschoolkotlin.config
+package com.tsystems.jschool.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -17,7 +17,7 @@ class AppConfig {
         .select()
         .apis(
             RequestHandlerSelectors
-                .basePackage("com.tsystems.jschoolkotlin.controller")
+                .basePackage("com.tsystems.jschool.controller")
         )
         .build()
 }

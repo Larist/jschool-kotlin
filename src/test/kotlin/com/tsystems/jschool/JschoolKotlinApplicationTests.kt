@@ -1,4 +1,4 @@
-package com.tsystems.jschoolkotlin
+package com.tsystems.jschool
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

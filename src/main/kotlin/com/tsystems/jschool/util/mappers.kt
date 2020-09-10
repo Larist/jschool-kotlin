@@ -1,11 +1,11 @@
-package com.tsystems.jschoolkotlin.util
+package com.tsystems.jschool.util
 
-import com.tsystems.jschoolkotlin.entity.Book
-import com.tsystems.jschoolkotlin.entity.Genre
-import com.tsystems.jschoolkotlin.entity.User
-import com.tsystems.jschoolkotlin.model.BookDto
-import com.tsystems.jschoolkotlin.model.CreateUserRequest
-import com.tsystems.jschoolkotlin.model.UserDto
+import com.tsystems.jschool.entity.Book
+import com.tsystems.jschool.entity.Genre
+import com.tsystems.jschool.entity.User
+import com.tsystems.jschool.model.BookDto
+import com.tsystems.jschool.model.CreateUserRequest
+import com.tsystems.jschool.model.UserDto
 
 fun User.toUserDto() = UserDto(
     id.toString(),

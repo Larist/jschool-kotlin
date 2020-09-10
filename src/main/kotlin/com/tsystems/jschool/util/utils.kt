@@ -1,7 +1,7 @@
-package com.tsystems.jschoolkotlin.util
+package com.tsystems.jschool.util
 
-import com.tsystems.jschoolkotlin.exception.EmailInvalidException
-import com.tsystems.jschoolkotlin.exception.IdInvalidException
+import com.tsystems.jschool.exception.EmailInvalidException
+import com.tsystems.jschool.exception.IdInvalidException
 import java.util.*
 
 private val EMAIL_REGEX = """([a-zA-Z0-9._-]+)@(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,})""".toRegex()

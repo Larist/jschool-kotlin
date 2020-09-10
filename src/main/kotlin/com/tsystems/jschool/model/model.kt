@@ -1,4 +1,4 @@
-package com.tsystems.jschoolkotlin.model
+package com.tsystems.jschool.model
 
 data class UserDto(
     val id: String,

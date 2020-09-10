@@ -1,10 +1,10 @@
-package com.tsystems.jschoolkotlin.controller
+package com.tsystems.jschool.controller
 
-import com.tsystems.jschoolkotlin.exception.NotFoundException
-import com.tsystems.jschoolkotlin.model.ChangeUserBooksRequest
-import com.tsystems.jschoolkotlin.model.CreateUserRequest
-import com.tsystems.jschoolkotlin.service.UserService
-import com.tsystems.jschoolkotlin.util.toUUID
+import com.tsystems.jschool.exception.NotFoundException
+import com.tsystems.jschool.model.ChangeUserBooksRequest
+import com.tsystems.jschool.model.CreateUserRequest
+import com.tsystems.jschool.service.UserService
+import com.tsystems.jschool.util.toUUID
 import org.springframework.web.bind.annotation.*
 
 @RestController

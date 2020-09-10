@@ -1,4 +1,4 @@
-package com.tsystems.jschoolkotlin.entity
+package com.tsystems.jschool.entity
 
 import org.slf4j.LoggerFactory
 import java.util.*

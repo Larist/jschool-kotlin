@@ -1,6 +1,6 @@
-package com.tsystems.jschoolkotlin.dao
+package com.tsystems.jschool.dao
 
-import com.tsystems.jschoolkotlin.entity.Book
+import com.tsystems.jschool.entity.Book
 import org.springframework.stereotype.Repository
 
 @Repository

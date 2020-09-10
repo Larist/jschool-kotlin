@@ -1,11 +1,11 @@
-package com.tsystems.jschoolkotlin;
+package com.tsystems.jschool;
 
 
 import org.junit.jupiter.api.Test;
 
-import com.tsystems.jschoolkotlin.exception.EmailInvalidException;
-import com.tsystems.jschoolkotlin.exception.IdInvalidException;
-import com.tsystems.jschoolkotlin.util.UtilsKt;
+import com.tsystems.jschool.exception.EmailInvalidException;
+import com.tsystems.jschool.exception.IdInvalidException;
+import com.tsystems.jschool.util.UtilsKt;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;

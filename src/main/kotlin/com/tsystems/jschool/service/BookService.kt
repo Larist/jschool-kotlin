@@ -1,9 +1,9 @@
-package com.tsystems.jschoolkotlin.service
+package com.tsystems.jschool.service
 
-import com.tsystems.jschoolkotlin.dao.BookDao
-import com.tsystems.jschoolkotlin.model.BookDto
-import com.tsystems.jschoolkotlin.util.toBook
-import com.tsystems.jschoolkotlin.util.toBookDto
+import com.tsystems.jschool.dao.BookDao
+import com.tsystems.jschool.model.BookDto
+import com.tsystems.jschool.util.toBook
+import com.tsystems.jschool.util.toBookDto
 import org.springframework.stereotype.Service
 import java.util.*
 

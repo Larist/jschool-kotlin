@@ -1,14 +1,14 @@
-package com.tsystems.jschoolkotlin.service
+package com.tsystems.jschool.service
 
-import com.tsystems.jschoolkotlin.dao.BookDao
-import com.tsystems.jschoolkotlin.dao.UserDao
-import com.tsystems.jschoolkotlin.exception.IdInvalidException
-import com.tsystems.jschoolkotlin.model.ChangeUserBooksRequest
-import com.tsystems.jschoolkotlin.model.CreateUserRequest
-import com.tsystems.jschoolkotlin.util.toUUID
-import com.tsystems.jschoolkotlin.util.toUser
-import com.tsystems.jschoolkotlin.util.toUserDto
-import com.tsystems.jschoolkotlin.util.validateEmail
+import com.tsystems.jschool.dao.BookDao
+import com.tsystems.jschool.dao.UserDao
+import com.tsystems.jschool.exception.IdInvalidException
+import com.tsystems.jschool.model.ChangeUserBooksRequest
+import com.tsystems.jschool.model.CreateUserRequest
+import com.tsystems.jschool.util.toUUID
+import com.tsystems.jschool.util.toUser
+import com.tsystems.jschool.util.toUserDto
+import com.tsystems.jschool.util.validateEmail
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service

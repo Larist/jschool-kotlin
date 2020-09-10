@@ -1,4 +1,4 @@
-package com.tsystems.jschoolkotlin
+package com.tsystems.jschool
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

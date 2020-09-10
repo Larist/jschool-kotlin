@@ -1,9 +1,9 @@
-package com.tsystems.jschoolkotlin.controller
+package com.tsystems.jschool.controller
 
-import com.tsystems.jschoolkotlin.exception.NotFoundException
-import com.tsystems.jschoolkotlin.model.BookDto
-import com.tsystems.jschoolkotlin.service.BookService
-import com.tsystems.jschoolkotlin.util.toUUID
+import com.tsystems.jschool.exception.NotFoundException
+import com.tsystems.jschool.model.BookDto
+import com.tsystems.jschool.service.BookService
+import com.tsystems.jschool.util.toUUID
 import org.springframework.web.bind.annotation.*
 
 @RestController

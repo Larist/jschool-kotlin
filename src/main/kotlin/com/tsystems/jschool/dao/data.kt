@@ -1,14 +1,14 @@
-package com.tsystems.jschoolkotlin.dao
+package com.tsystems.jschool.dao
 
-import com.tsystems.jschoolkotlin.entity.Book
-import com.tsystems.jschoolkotlin.entity.Genre
-import com.tsystems.jschoolkotlin.entity.User
+import com.tsystems.jschool.entity.Book
+import com.tsystems.jschool.entity.Genre
+import com.tsystems.jschool.entity.User
 
 val harryPotter = Book("Harry Potter", "J. K. Rowling", Genre.FANTASY)
 val hisDarkMaterials = Book("His Dark Materials", "Philip Pullman", Genre.FANTASY)
 val sherlock = Book("Sherlock Holmes", "Sir Arthur Ignatius Conan Doyle", Genre.DETECTIVE)
 val shining = Book("The Shining", "Stephen Edwin King", Genre.HORROR)
-val goodYear = Book("Peter Mayle", " A Good Year")
+val goodYear = Book("A Good Year", "Peter Mayle")
 
 val andrey = User(
     "Andrey",
